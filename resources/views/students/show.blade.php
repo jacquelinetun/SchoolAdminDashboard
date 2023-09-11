@@ -9,7 +9,7 @@
         <p class="card-text">Major : {{ $students->major }}</p>
         <p class="card-text">Mobile : {{ $students->mobile }}</p>
         <hr>
-        <button type="button" class="btn btn-outline-success"><a class="btn-hover text-decoration-none" href="{{ url()->previous() }}"> Back</a></button>
+        <a class="btn-hover text-decoration-none btn btn-outline-success" href="{{ url()->previous() }}"> Back</a>
         </div>
     </div>
 

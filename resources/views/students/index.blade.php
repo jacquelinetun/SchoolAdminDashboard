@@ -8,7 +8,7 @@
                     <h2>Students Table (CRUD)</h2>
                 </div>
                 <div class="card-body">
-                    <button type="button" class="btn btn-outline-success"> <a class=" btn-hover text-decoration-none  " href="{{route('student.create')}}"> Add New</a></button>
+                    <a class=" btn-hover text-decoration-none btn btn-outline-success  " href="{{route('student.create')}}"> Add New</a>
                     <br/>
                     <br/>
                     <div class="table-responsive">
