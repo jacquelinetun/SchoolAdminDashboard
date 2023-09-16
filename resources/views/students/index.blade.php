@@ -6,6 +6,15 @@
             <div class="card">
                 <div class="card-header">
                     <h2>Students Table (CRUD)</h2>
+                {{-- </div>
+
+                <div> --}}
+                    @if (session()->has('flash_message'))
+                    <div class="alert alert-success text-center">
+                        {{session()->get('flash_message')}}
+                    </div>
+
+                    @endif
                 </div>
                 <div class="card-body">
                     <a class=" btn-hover text-decoration-none btn btn-outline-success  " href="{{route('student.create')}}"> Add New</a>
@@ -26,7 +35,6 @@
                             <tbody>
                             @foreach ($students as $item)
                                 <tr>
-                                    {{-- <td>{{ $loop->iteration }}</td> --}}
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->address }}</td>
@@ -41,7 +49,6 @@
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-danger btn-sm" title="Delete Student"><i class="fa-regular fa-circle-xmark"></i> Delete</button>
-                                            {{-- onclick="return confirm("Confirm delete?")" --}}
                                         </form>
                                     </td>
                                 </tr>
